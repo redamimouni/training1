@@ -2,7 +2,7 @@
 //  ViewModelTests.swift
 //  trainingAppTests
 //
-//  Created by reda.mimouni.ext on 25/10/2023.
+//  Created by reda.mimouni.ext on 27/10/2023.
 //
 
 import XCTest
@@ -10,19 +10,21 @@ import XCTest
 
 class ViewModelTests: XCTestCase {
 
-    func test_onClick_false() {
+    func test_onClick_should_return_true() {
         let viewModel = ViewModel()
 
-        let result = viewModel.onClick(userName: "toto", password: "tata")
+        let result = viewModel.onClick(login: "JOHN DOE", password: "OMNES")
+
+        XCTAssertTrue(result)
+    }
+
+    func test_onClick_should_return_false() {
+        let viewModel = ViewModel()
+
+        let result = viewModel.onClick(login: "", password: "")
 
         XCTAssertFalse(result)
     }
 
-    func test_onClick_true() {
-        let viewModel = ViewModel()
 
-        let result = viewModel.onClick(userName: "JOHN DOE", password: "OMNES")
-
-        XCTAssertTrue(result)
-    }
 }

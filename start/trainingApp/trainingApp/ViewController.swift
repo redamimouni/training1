@@ -20,15 +20,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onClick() {
-        let result = self.viewModel.onClick(
-            userName: userNameTextField?.text,
+        if self.viewModel.onClick(
+            login: userNameTextField?.text,
             password: passwordTextField?.text
-        )
-        if result {
-            let alertSuccess = UIAlertController(title: "Felicitation", message: "Vous êtes bien connecté John", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Ok", style: .default)
-            alertSuccess.addAction(action)
-            self.present(alertSuccess, animated: true)
+        ) {
+            // afficher un nouvel écran
+            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+            let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController")
+            self.present(detailViewController, animated: true)
         } else {
             let alertFailure = UIAlertController(title: "Erreur", message: "Erreur de login/mot de passe", preferredStyle: .actionSheet)
             let action = UIAlertAction(title: "Ok", style: .default)
