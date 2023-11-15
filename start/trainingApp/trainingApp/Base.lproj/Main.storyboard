@@ -79,29 +79,7 @@
         <!--Detail View Controller-->
         <scene sceneID="tFt-lx-ijY">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="Fqb-dB-Dp9" customClass="DetailViewController" customModule="trainingApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ad9-hO-VFc">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="79N-Bf-ga9">
-                                <rect key="frame" x="0.0" y="90" width="430" height="742"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="rch-aY-3Uf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="79N-Bf-ga9" firstAttribute="leading" secondItem="rch-aY-3Uf" secondAttribute="leading" id="1oF-9e-VVO"/>
-                            <constraint firstItem="79N-Bf-ga9" firstAttribute="trailing" secondItem="rch-aY-3Uf" secondAttribute="trailing" id="9MP-bG-tNI"/>
-                            <constraint firstItem="79N-Bf-ga9" firstAttribute="top" secondItem="rch-aY-3Uf" secondAttribute="top" constant="31" id="CJY-AE-c95"/>
-                            <constraint firstItem="rch-aY-3Uf" firstAttribute="bottom" secondItem="79N-Bf-ga9" secondAttribute="bottom" constant="66" id="otf-5h-KoQ"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="79N-Bf-ga9" id="znV-k3-Z22"/>
-                    </connections>
-                </viewController>
+                <viewController storyboardIdentifier="DetailViewController" id="Fqb-dB-Dp9" customClass="DetailViewController" customModule="trainingApp" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3r-K6-d7s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-768.83720930232562" y="-378.54077253218884"/>
