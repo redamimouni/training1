@@ -25,7 +25,9 @@ class ViewController: UIViewController {
             password: passwordTextField?.text
         ) {
             // afficher un nouvel écran
-
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController")
+            self.present(viewController, animated: true)
         } else {
             let alertFailure = UIAlertController(title: "Erreur", message: "Erreur de login/mot de passe", preferredStyle: .actionSheet)
             let action = UIAlertAction(title: "Ok", style: .default)
